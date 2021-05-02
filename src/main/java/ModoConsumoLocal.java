@@ -1,12 +1,12 @@
 import java.time.LocalTime;
 import java.time.temporal.ChronoUnit;
 
-public class CalculadorDiaHorarioLocal implements CalculadorDiaHorario {
+public class ModoConsumoLocal implements ModoConsumo {
     private int dia;
     private LocalTime horarioInicial;
     private LocalTime horarioFinal;
 
-    public CalculadorDiaHorarioLocal(int dia, LocalTime horaInicial, LocalTime horaFinal) {
+    public ModoConsumoLocal(int dia, LocalTime horaInicial, LocalTime horaFinal) {
         this.dia = dia;
         this.horarioInicial = horaInicial;
         this.horarioFinal = horaFinal;

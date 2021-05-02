@@ -22,8 +22,8 @@ public class EjercicioTecnicoTests {
         LocalTime horaInicial = LocalTime.of(10, 30, 00);
         LocalTime horaFinal = LocalTime.of(10, 40, 00);
 
-        CalculadorDiaHorarioLocal calculadorDiaHorarioLocal = new CalculadorDiaHorarioLocal(1, horaInicial, horaFinal);
-        Llamada llamada1 = new Llamada(calculadorDiaHorarioLocal);
+        ModoConsumoLocal modoConsumoLocal = new ModoConsumoLocal(1, horaInicial, horaFinal);
+        Llamada llamada1 = new Llamada(modoConsumoLocal);
 
         Facturador facturador = new Facturador();
         facturador.agregarLlamadaLocal(llamada1);
@@ -40,11 +40,11 @@ public class EjercicioTecnicoTests {
         LocalTime horaInicial2 = LocalTime.of(20, 30, 00);
         LocalTime horaFinal2 = LocalTime.of(23, 00, 00);
 
-        CalculadorDiaHorarioLocal calculadorDiaHorarioLocal1 = new CalculadorDiaHorarioLocal(1, horaInicial1, horaFinal1);
-        CalculadorDiaHorarioLocal calculadorDiaHorarioLocal2 = new CalculadorDiaHorarioLocal(6, horaInicial2, horaFinal2);
+        ModoConsumoLocal modoConsumoLocal1 = new ModoConsumoLocal(1, horaInicial1, horaFinal1);
+        ModoConsumoLocal modoConsumoLocal2 = new ModoConsumoLocal(6, horaInicial2, horaFinal2);
 
-        Llamada llamada1 = new Llamada(calculadorDiaHorarioLocal1);
-        Llamada llamada2 = new Llamada(calculadorDiaHorarioLocal2);
+        Llamada llamada1 = new Llamada(modoConsumoLocal1);
+        Llamada llamada2 = new Llamada(modoConsumoLocal2);
 
         Facturador facturador = new Facturador();
         facturador.agregarLlamadaLocal(llamada1);
@@ -59,8 +59,8 @@ public class EjercicioTecnicoTests {
         LocalTime horaInicial = LocalTime.of(10, 30, 00);
         LocalTime horaFinal = LocalTime.of(10, 40, 00);
 
-        CalculadorDiaHorarioNoLocal calculadorDiaHorarioLocal = new CalculadorDiaHorarioNoLocal(costoPais, horaInicial, horaFinal);
-        Llamada llamada1 = new Llamada(calculadorDiaHorarioLocal);
+        ModoConsumoNoLocal modoConsumoNoLocal = new ModoConsumoNoLocal(costoPais, horaInicial, horaFinal);
+        Llamada llamada1 = new Llamada(modoConsumoNoLocal);
 
         Facturador facturador = new Facturador();
         facturador.agregarLlamadaNoLocal(llamada1);
@@ -75,13 +75,13 @@ public class EjercicioTecnicoTests {
         LocalTime horaFinal2 = LocalTime.of(11, 30, 00);
         LocalTime horaFinal3 = LocalTime.of(14, 30, 00);
 
-        CalculadorDiaHorarioNoLocal calculador1 = new CalculadorDiaHorarioNoLocal(costoPais, horaInicial, horaFinal);
-        CalculadorDiaHorarioNoLocal calculador2 = new CalculadorDiaHorarioNoLocal(0.5, horaInicial, horaFinal2);
-        CalculadorDiaHorarioNoLocal calculador3 = new CalculadorDiaHorarioNoLocal(0.6, horaInicial, horaFinal3);
+        ModoConsumoNoLocal modoConsumoNoLocal1 = new ModoConsumoNoLocal(costoPais, horaInicial, horaFinal);
+        ModoConsumoNoLocal modoConsumoNoLocal2 = new ModoConsumoNoLocal(0.5, horaInicial, horaFinal2);
+        ModoConsumoNoLocal modoConsumoNoLocal3 = new ModoConsumoNoLocal(0.6, horaInicial, horaFinal3);
 
-        Llamada llamada1 = new Llamada(calculador1);
-        Llamada llamada2 = new Llamada(calculador2);
-        Llamada llamada3 = new Llamada(calculador3);
+        Llamada llamada1 = new Llamada(modoConsumoNoLocal1);
+        Llamada llamada2 = new Llamada(modoConsumoNoLocal2);
+        Llamada llamada3 = new Llamada(modoConsumoNoLocal3);
 
         Facturador facturador = new Facturador();
         facturador.agregarLlamadaNoLocal(llamada1);
@@ -97,8 +97,8 @@ public class EjercicioTecnicoTests {
         LocalTime horaInicial = LocalTime.of(10, 30, 00);
         LocalTime horaFinal = LocalTime.of(12, 30, 00);
 
-        CalculadorDiaHorarioNoLocal calculadorDiaHorarioLocal = new CalculadorDiaHorarioNoLocal(costoLocalidad, horaInicial, horaFinal);
-        Llamada llamada1 = new Llamada(calculadorDiaHorarioLocal);
+        ModoConsumoNoLocal modoConsumoLocal = new ModoConsumoNoLocal(costoLocalidad, horaInicial, horaFinal);
+        Llamada llamada1 = new Llamada(modoConsumoLocal);
 
         Facturador facturador = new Facturador();
         facturador.agregarLlamadaNoLocal(llamada1);
@@ -117,13 +117,13 @@ public class EjercicioTecnicoTests {
         LocalTime horaInicial3 = LocalTime.of(21, 00, 00);
         LocalTime horaFinal3 = LocalTime.of(01, 00, 00);
 
-        CalculadorDiaHorarioLocal calculadorLocal = new CalculadorDiaHorarioLocal(6, horaInicial, horaFinal);
-        CalculadorDiaHorarioNoLocal calculadorNoLocal2 = new CalculadorDiaHorarioNoLocal(costoLocalidad, horaInicial2, horaFinal2);
-        CalculadorDiaHorarioNoLocal calculadorNoLocal3 = new CalculadorDiaHorarioNoLocal(costoPais, horaInicial3, horaFinal3);
+        ModoConsumoLocal ModoConsumoLocal = new ModoConsumoLocal(6, horaInicial, horaFinal);
+        ModoConsumoNoLocal ModoConsumoNoLocal1 = new ModoConsumoNoLocal(costoLocalidad, horaInicial2, horaFinal2);
+        ModoConsumoNoLocal ModoConsumoNoLocal2 = new ModoConsumoNoLocal(costoPais, horaInicial3, horaFinal3);
 
-        Llamada llamada1 = new Llamada(calculadorLocal);
-        Llamada llamada2 = new Llamada(calculadorNoLocal2);
-        Llamada llamada3 = new Llamada(calculadorNoLocal3);
+        Llamada llamada1 = new Llamada(ModoConsumoLocal);
+        Llamada llamada2 = new Llamada(ModoConsumoNoLocal1);
+        Llamada llamada3 = new Llamada(ModoConsumoNoLocal2);
 
         Facturador facturador = new Facturador();
         facturador.agregarLlamadaNoLocal(llamada3);

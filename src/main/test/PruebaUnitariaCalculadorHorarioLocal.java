@@ -1,7 +1,6 @@
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalTime;
-import java.time.temporal.ChronoUnit;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -14,8 +13,8 @@ public class PruebaUnitariaCalculadorHorarioLocal {
         int dia = 1;
         LocalTime horaInicial = LocalTime.of(10, 30, 00);
         LocalTime horaFinal = LocalTime.of(10, 40, 00);
-        CalculadorDiaHorarioLocal calculadorDiaHorarioLocal = new CalculadorDiaHorarioLocal(dia, horaInicial, horaFinal);
-        assertEquals(calculadorDiaHorarioLocal.calcularConsumo(), 10 * costoMinutoHabil);
+        ModoConsumoLocal ModoConsumoLocal = new ModoConsumoLocal(dia, horaInicial, horaFinal);
+        assertEquals(ModoConsumoLocal.calcularConsumo(), 10 * costoMinutoHabil);
     }
 
     @Test
@@ -23,8 +22,8 @@ public class PruebaUnitariaCalculadorHorarioLocal {
         int dia = 1;
         LocalTime horaInicial = LocalTime.of(19, 00, 00);
         LocalTime horaFinal = LocalTime.of(21, 00, 00);
-        CalculadorDiaHorarioLocal calculadorDiaHorarioLocal = new CalculadorDiaHorarioLocal(dia, horaInicial, horaFinal);
-        assertEquals(calculadorDiaHorarioLocal.calcularConsumo(), 60 * costoMinutoHabil + 60 * costoMinutoNoHabil);
+        ModoConsumoLocal ModoConsumoLocal = new ModoConsumoLocal(dia, horaInicial, horaFinal);
+        assertEquals(ModoConsumoLocal.calcularConsumo(), 60 * costoMinutoHabil + 60 * costoMinutoNoHabil);
     }
 
     @Test
@@ -32,8 +31,8 @@ public class PruebaUnitariaCalculadorHorarioLocal {
         int dia = 1;
         LocalTime horaInicial = LocalTime.of(6, 00, 00);
         LocalTime horaFinal = LocalTime.of(9, 00, 00);
-        CalculadorDiaHorarioLocal calculadorDiaHorarioLocal = new CalculadorDiaHorarioLocal(dia, horaInicial, horaFinal);
-        assertEquals(calculadorDiaHorarioLocal.calcularConsumo(), 60 * costoMinutoHabil + 120 * costoMinutoNoHabil);
+        ModoConsumoLocal ModoConsumoLocal = new ModoConsumoLocal(dia, horaInicial, horaFinal);
+        assertEquals(ModoConsumoLocal.calcularConsumo(), 60 * costoMinutoHabil + 120 * costoMinutoNoHabil);
     }
 
     @Test
@@ -41,8 +40,8 @@ public class PruebaUnitariaCalculadorHorarioLocal {
         int dia = 6;
         LocalTime horaInicial = LocalTime.of(23, 00, 00);
         LocalTime horaFinal = LocalTime.of(1, 00, 00);
-        CalculadorDiaHorarioLocal calculadorDiaHorarioLocal = new CalculadorDiaHorarioLocal(dia, horaInicial, horaFinal);
-        assertEquals(calculadorDiaHorarioLocal.calcularConsumo(), 120 * costoMinutoNoHabil);
+        ModoConsumoLocal ModoConsumoLocal = new ModoConsumoLocal(dia, horaInicial, horaFinal);
+        assertEquals(ModoConsumoLocal.calcularConsumo(), 120 * costoMinutoNoHabil);
     }
 
 }
